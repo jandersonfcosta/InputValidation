@@ -28,12 +28,19 @@ var inputValidation = {
 
     isStandard: function(value) {
         var keyCode = window.event.keyCode;
+        console.log(keyCode);
 
         if (
+            keyCode === 13 || // enter
             keyCode === 8 || // backspace
+            keyCode === 46 || // del
             keyCode === 37 || // left
             keyCode === 39 || // right
-            keyCode === 46 // del
+            keyCode === 9 || // tab
+            keyCode === 27 || // esc
+            keyCode === 36 || // home
+            keyCode === 35 || // end
+            keyCode === 116 // f5
         )
             return true;
         else
